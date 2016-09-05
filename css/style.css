@@ -1,0 +1,86 @@
+@font-face {
+			font-family: Apercu;
+    		src: url(../fonts/apercu_bold_pro.otf);
+		}
+
+@font-face {
+		font-family: HelveticaExtended;
+    	src: url(../fonts/HelveticaNeue-HeavyExt.ttf);
+		}
+
+@font-face {
+	font-family: GTSectraFine;
+    src: url(../fonts/GT-Sectra-Fine-Regular.otf);
+	}		
+
+body{
+	background-color: #F2F2F2;
+
+	}
+
+h1{
+	font-family: GTSectraFine, serif;
+	font-weight: normal;
+	font-size: 30pt;
+	top:0;
+	left: 2%;
+	position: fixed;
+
+}
+
+h2{
+	font-family: GTSectraFine, serif;
+	font-size: 30pt;
+	bottom: 0px;
+	right:	2%;
+	position: fixed;
+	font-weight: normal;
+	color: blue;
+
+}
+
+.projects{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
+	padding: 20px;
+	resize: both;
+	overflow: auto;
+}
+
+#list{
+	color: white;
+	width: 400px;
+	height: 100px;
+	margin: -70px 0 0 -240px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	padding: 20px;
+}
+#project-list{
+	font-size: 15pt;
+	width: 100%;
+	color: black;
+	font-family: HelveticaExtended;
+}
+
+#project-list:hover{
+	color: #F2F2F2;
+}
+
+span#dot{
+	text-align: left;
+}
+a{
+	text-decoration: none;
+}
+
+a:visited{
+	color: blue;
+}
+
+a:hover{
+	color: #F2F2F2;
+}
