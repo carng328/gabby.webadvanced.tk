@@ -25,7 +25,13 @@ h1{
 	top:0;
 	left: 2%;
 	position: fixed;
+	cursor: pointer;
+}
 
+
+h1:hover + img{
+	display: block;
+	cursor: pointer;
 }
 
 h2{
@@ -47,6 +53,7 @@ h2{
 	padding: 20px;
 	resize: both;
 	overflow: auto;
+	z-index: -1;
 }
 
 #list{
@@ -70,9 +77,6 @@ h2{
 	color: #F2F2F2;
 }
 
-span#dot{
-	text-align: left;
-}
 a{
 	text-decoration: none;
 }
@@ -84,3 +88,13 @@ a:visited{
 a:hover{
 	color: #F2F2F2;
 }
+
+img{
+	display: none;
+	position:absolute;	
+	top: 8%;	
+   	left:2%;
+	width: 18%;
+	z-index: -1;
+}
+
