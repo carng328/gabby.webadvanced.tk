@@ -77,7 +77,7 @@ h2{
 	font-size: 15pt;
 	color: black;
 	font-family: "HelveticaExtended", serif;
-	cursor: progress;
+	cursor: pointer;
 }
 
 #project-list-pending{
