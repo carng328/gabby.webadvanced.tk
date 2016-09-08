@@ -10,25 +10,29 @@
 
     <div id="container"></div>
 
-    <h1 style="color: rgb(0,255,0);">4/10</h1>
+    <h1 style="color: rgb(150,100,50);">9/10</h1>
 
     <br style="clear:both">
 
     <div class="icon">
-        <img src="../assets/images/4/icons-10.png">
+        <img src="../assets/images/9/icons-26.png">
     </div>
 
     <div class="icon">
-  	   <img src="../assets/images/4/icons-10.png">
+  	   <img src="../assets/images/9/icons-27.png">
     </div>
 	   
     <div class="icon">
-  	   <img src="../assets/images/4/icons-10.png">
+  	   <img src="../assets/images/9/icons-28.png">
+    </div>    
+
+    <div class="icon">
+       <img src="../assets/images/9/icons-29.png">
     </div>
 
     <audio controls="controls" 
             onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, 7050)">
-    <source src="../assets/sounds/ding.ogg" type="audio/ogg" />
+    <source src="../sounds/ding.ogg" type="audio/ogg" />
     </audio>
     
     <div id="information">
@@ -49,7 +53,7 @@
       strokeWidth: 4,
       easing: 'easeInOut',
       duration: 8000,
-      color: 'rgb(0,255,0)',
+      color: 'rgb(150,100,50)',
       trailColor: '#eee',
       trailWidth: 1,
       svgStyle: null
@@ -80,10 +84,10 @@ $('.icon').each(function(i,el){
     $('#information').remove();
   })
 
-
 //AUTO TO NEXT PAGE
 var delay = 8000; //Your delay in milliseconds
-setTimeout(function(){ window.location = "../5/5.html"; }, delay);
+setTimeout(function(){ window.location = "../10/index.html"; }, delay);
+
 
 </script>
 </html>
