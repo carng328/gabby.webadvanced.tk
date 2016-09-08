@@ -1,0 +1,107 @@
+<html>
+<head>
+	<title></title>
+	<script src="js/progressbar.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>	
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div id="container"></div>
+
+    <h1>1/10</h1>
+
+    <br style="clear:both">
+
+    <div id="draggable1" class="icon">
+        <img src="images/1/icon-01.png">
+    </div>
+
+    <div id="draggable2" class="icon">
+  	   <img src="images/1/icon-02.png">
+    </div>
+	   
+    <div id="draggable3" class="icon">
+  	   <img src="images/1/icon-03.png">
+    </div>
+
+    <audio controls="controls" 
+            onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, 8000)">
+    <source src="sounds/ding.ogg" type="audio/ogg" />
+    </audio>
+
+    <div class="random" id="r1">box one</div>
+    <div class="random" id="r2">box two</div>
+    <div class="random" id="r3">box three</div>
+    <div class="random" id="r4">box four</div>
+ 
+</body>
+<script type="text/javascript">
+
+// progressbar.js@1.0.0 version is used
+// Docs: http://progressbarjs.readthedocs.org/en/1.0.0/
+    var bar = new ProgressBar.Circle('#container', {
+      strokeWidth: 4,
+      easing: 'easeInOut',
+      duration: 8000,
+      color: 'red',
+      trailColor: '#eee',
+      trailWidth: 1,
+      svgStyle: null
+    });
+
+    bar.animate(1.0);  // Number from 0.0 to 1.0
+
+
+//
+
+function init(){
+
+    w=document.body.offsetWidth;
+    h=document.body.offsetHeight;
+    rd=document.getElementsByTagName('div');
+
+    for(c=0;c<rd.length;c++) {
+    if(rd[c].className=='icon') {
+       xCoord=Math.floor(Math.random()*w);
+       yCoord=Math.floor(Math.random()*h);
+
+    if(xCoord>=w-rd[c].offsetWidth-10){
+       xCoord=w-rd[c].offsetWidth-10;
+     }
+    if(xCoord<=10){
+       xCoord=10;
+     }
+
+    if(yCoord>=h-rd[c].offsetHeight-10){
+       yCoord=h-rd[c].offsetHeight-10;
+     }
+    if(yCoord<=10){
+       yCoord=10;
+     }
+
+       rd[c].style.left=xCoord+'px';
+       rd[c].style.top=yCoord+'px';
+       }
+      }
+     }
+   window.addEventListener?
+   window.addEventListener('load',init,false):
+   window.attachEvent('onload',init);
+
+
+    $( function() {
+        $( '.icon' ).draggable({ grid: [ 50, 50 ] });
+      } );
+
+    $( function() {
+        $( "#draggable2" ).draggable({ grid: [ 50, 50 ] });
+      } );
+
+    $( function() {
+        $( "#draggable3" ).draggable({ grid: [  50, 50] });
+      } );
+
+</script>
+</html>

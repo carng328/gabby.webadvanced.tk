@@ -1,0 +1,94 @@
+<html>
+<head>
+	<title></title>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+  <script src="../js/progressbar.js"></script>	
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div id="container"></div>
+
+    <h1 style="color: magenta;">7/10</h1>
+
+    <br style="clear:both">
+
+    <div class="icon">
+        <img src="../images/7/icons-18.png">
+    </div>
+
+    <div class="icon">
+  	   <img src="../images/7/icons-19.png">
+    </div>
+	   
+    <div class="icon">
+  	   <img src="../images/7/icons-20.png">
+    </div>
+
+    <div class="icon">
+       <img src="../images/7/icons-21.png">
+    </div>
+
+
+    <audio controls="controls" 
+            onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, 7050)">
+    <source src="../sounds/ding.ogg" type="audio/ogg" />
+    </audio>
+    
+    <div id="information">
+  
+      Organize, quick! 
+    
+    
+    <button id="infoclose" >&times;</button>
+
+</div>
+
+</body>
+<script type="text/javascript">
+
+// progressbar.js@1.0.0 version is used
+// Docs: http://progressbarjs.readthedocs.org/en/1.0.0/
+    var bar = new ProgressBar.Circle('#container', {
+      strokeWidth: 4,
+      easing: 'easeInOut',
+      duration: 8000,
+      color: 'magenta',
+      trailColor: '#eee',
+      trailWidth: 1,
+      svgStyle: null
+    });
+
+    bar.animate(1.0);  // Number from 0.0 to 1.0
+
+
+// DRAGGABLE ICONS
+$(document).ready(function() {
+    $(".icon").draggable({ grid: [ 15, 15 ] });
+
+$('.icon').each(function(i,el){
+
+    var tLeft = Math.floor(Math.random()*500),
+        tTop  = Math.floor(Math.random()*500);
+
+    $(el).css({position:'absolute', left: tLeft, top: tTop});
+
+    });
+    });
+
+//INFO DRAGGABLE
+  $('#information').draggable();
+
+//INFO CLOSE
+  $('#infoclose').click( function () {
+    $('#information').remove();
+  })
+
+
+//AUTO TO NEXT PAGE
+var delay = 8000; //Your delay in milliseconds
+setTimeout(function(){ window.location = "8.html"; }, delay);
+
+</script>
+</html>
