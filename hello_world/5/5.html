@@ -3,36 +3,32 @@
 	<title></title>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
-  <script src="../js/progressbar.js"></script>	
-  <link rel="stylesheet" href="../css/style.css">
+  <script src="../assets/js/progressbar.js"></script>	
+  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
 
     <div id="container"></div>
 
-    <h1 style="color: black;">10/10</h1>
+    <h1 style="color: cyan;">5/10</h1>
 
     <br style="clear:both">
 
     <div class="icon">
-        <img src="../images/10/icons-30.png">
+        <img src="../assets/images/5/icons-11.png">
     </div>
 
     <div class="icon">
-  	   <img src="../images/10/icons-31.png">
+  	   <img src="../assets/images/5/icons-12.png">
     </div>
 	   
     <div class="icon">
-  	   <img src="../images/10/icons-32.png">
-    </div>
-
-    <div class="icon">
-       <img src="../images/10/icons-33.png">
+  	   <img src="../assets/images/5/icons-13.png">
     </div>
 
     <audio controls="controls" 
             onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, 7050)">
-    <source src="../sounds/ding.ogg" type="audio/ogg" />
+    <source src="../assets/sounds/ding.ogg" type="audio/ogg" />
     </audio>
     
     <div id="information">
@@ -53,7 +49,7 @@
       strokeWidth: 4,
       easing: 'easeInOut',
       duration: 8000,
-      color: 'black',
+      color: 'cyan',
       trailColor: '#eee',
       trailWidth: 1,
       svgStyle: null
@@ -87,8 +83,7 @@ $('.icon').each(function(i,el){
 
 //AUTO TO NEXT PAGE
 var delay = 8000; //Your delay in milliseconds
-setTimeout(function(){ window.location = "../index.html"; }, delay);
-
+setTimeout(function(){ window.location = "../6/6.html"; }, delay);
 
 </script>
 </html>
