@@ -15,10 +15,7 @@
     src: url(../fonts/GT-Sectra-Fine-Regular.otf);
 	}		
 
-body{
-	background-color: #F2F2F2;
 
-	}
 
 h1{
 	font-family: GTSectraFine, serif;
@@ -48,6 +45,12 @@ h2{
 	z-index: 1;
 }
 
+.dotted {
+  
+
+  }
+
+
 /*PROJECTS*/
 
 .projects{
@@ -72,6 +75,14 @@ h2{
 	padding: 20px;
 	z-index: 2;
 }
+#project{
+	width: 500px;
+	font-size: 15pt;
+	color: black;
+	font-family: "HelveticaExtended", serif;
+	cursor: default;
+}
+
 #project-list{
 	width: 500px;
 	font-size: 15pt;
