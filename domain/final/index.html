@@ -1,0 +1,207 @@
+<html>
+<head>
+	<title>searching for/found</title>
+	<link 
+			rel="stylesheet" 
+			href="css/style.css">
+	<link>
+	<script src="js/jquery.js"></script>
+	<meta charset="utf-8">
+  <script src="js/home.js"></script>
+   <script src="js/marquee.js"></script>	
+</head>
+<body>
+<div id="address"></div>
+	
+	<div id="searching-for">
+		<div id="searching-for-inner">
+			<h1 id="searching-title"> searching for... </h1>
+				<div id="spacer"></div>
+				<div id="description">
+						Looking for a true friend and someone who I can talk to about anything and hope you could use a friend as well.
+						<br/>I am not married looking for a man friend that may be married as well and is having a hard time in their lives or relationship and needs someone to chat with and without any judgment on either side.
+						<br/>I'm not really sure what I'm doing or what I'm looking for at this point but I know I could use a true friend and someone with a open mind for a future friendship and see what happens
+						<br/>
+						<br/>posted: 8 days ago 
+						<a href="http://newyork.craigslist.org/brk/w4m/5826256557.html">↗</a>
+						<br/>
+						<button id="description-close" >&times;</button>
+
+				</div>
+				<div class="content" id="1">
+					Searching for my soulmate
+				</div>
+
+	 			<div class="content">
+					Searching for a female photographer			
+				</div>
+
+				<div class="content">
+					SEARCHING FOR JAKE S----A
+				</div>
+
+				<div class="content">
+					 Searching for an Asian woman for a serious relationship
+				</div>
+				<div class="content">
+	 				Searching for the right woman			
+				</div>
+					
+				<div class="content">
+					 Searching For a Princess 
+				</div>
+										
+				<div class="content">
+					   Asian & Black Female Searching for the right man
+				</div>
+										
+				<div class="content">
+						Searching for a Nerdy Girlfriend!!!!!			
+				</div>
+										
+				<div class="content">
+						searching for a southern belle 			
+				</div>
+
+				<div class="content">
+						Searching for someone different  			
+				</div>
+
+				<div class="content">
+						I'm a city girl searching for fun in my free time. 
+				</div>
+
+				<div class="content">
+						 Searching for a good woman    
+				</div>
+
+				<div class="content">
+						 searching for a nice woman  
+				</div>
+
+				<div class="content">
+						 Searching for one particular buddy  
+				</div>
+
+				<div class="content">
+						  Searching for Redheads  
+				</div>
+
+				<div class="content">
+						    Searching for a married Italian woman
+				</div>
+
+				<div class="content">
+						   
+				</div>
+		</div>
+	</div>
+
+		<div id="finding">
+			<div id="found-inner">
+				<h1 id="found-title"> found! </h1>	
+				<div id="spacer"></div>
+				<div class="content">
+					found Puma gym bag
+				</div>
+				<div class="content">
+					 Money Found at 23rd St bus stop
+				</div>
+				<div class="content">
+					Found your ID badge
+				</div>
+				<div class="content">
+					 Found phone 
+				</div>
+				<div class="content">
+					Found a lost beagle
+				</div>
+				<div class="content">
+					Found orange cat 
+				</div>
+				<div class="content">
+					Found Oliver Peoples glasses
+				</div>
+				<div class="content">
+					FOUND - three small keys 	
+				</div>
+				<div class="content">
+					Found something valuable on the UWS 
+				</div>
+				<div class="content">
+					Piece of a brooch found 
+				</div>
+				<div class="content">
+					found cat Marcy Ave 
+				</div>
+				<div class="content">
+					 Found Bike
+				</div>
+				<div class="content">
+					Found ring on M train
+				</div>
+				<div class="content">
+					FOUND KEYS
+				</div>
+				<div class="content">
+					 Found Chloe Sunglasses 
+				</div>
+				<div class="content">
+					LOST / FOUND BIRD?
+				</div>
+				<div class="content">
+					Found necklace
+				</div>
+				<div class="content">
+					Found Adult Male Neutered Cat
+				</div>
+				<div class="content">
+					 FOUND: White cat w/bi-color eyes
+				</div>			
+
+			</div>
+		</div>
+<div style="clear:both"></div>
+<script type="text/javascript">
+
+// RANDOM DISPLAY OF CONTENT
+
+$('.content').before('<div>&nbsp;</div>');
+
+(function fadeSearch() {
+    var divs = $('.content');
+    var elem = divs.eq(Math.floor(Math.random() * divs.length));
+    if (!elem.is(':visible')) {
+        elem.prev().remove();
+        elem.fadeIn(Math.floor(Math.random() * 800), fadeSearch);
+    } else {
+
+        elem.fadeOut(Math.floor(Math.random() * 800), function() {
+            elem.before('<div>&nbsp;</div>');
+            fadeSearch();
+        });
+    }
+})();
+
+// LOCATION
+$.get("http://ipinfo.io", function (response) {
+    $("#address").html(response.city + ", " + response.region);
+    $("#details").html(JSON.stringify(response, null, 4));
+}, "jsonp");
+
+
+document.getElementById('1').onclick = function() {myFunction()};
+
+
+function myFunction() {
+    document.getElementById('description').style.display='block';
+}
+
+$('#description-close').click( function () {
+    $('#description').hide();
+  })
+
+
+</script>
+</body>
+</html>
