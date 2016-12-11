@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Make America Read Again</title>
+    <link 
+      rel="stylesheet" 
+      href="css/style.css">
+  </head>
+  <body>
+    <!--https://developer.yahoo.com/yql/-->
+
+    <div id="content"></div>
+      <div class="parent">
+        <div class="child">
+        </div>
+      </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="js/jquery.query-yql.min.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        var t = $('#content').empty();
+        var statement = "select * from feed where url='https://twitrss.me/twitter_user_to_rss/?user=realDonaldTrump'";
+        $.queryYQL(statement, "json", undefined, function (data) {
+          // do something with "data".
+          console.log(data.query.results.item);
+          
+          for (var i = 0; i < data.query.results.item.length; i++) {
+            console.log(i);
+            console.log(data.query.results.item[i].title);
+            
+            $(".child").append("<div class='tweet'>" + data.query.results.item[i].title + "</div>");
+            // $("body").append("<p>" + data.query.results.item[i].pubDate + "</p>");
+          }
+          
+
+        });
+
+ 
+      });
+    </script>
+  </body>
+</html>

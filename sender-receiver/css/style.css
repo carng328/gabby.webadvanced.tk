@@ -1,0 +1,35 @@
+@font-face {
+	font-family: Goudy;
+	src: url(../fonts/GoudyStM.otf);
+	}
+
+body {
+	font-family: Goudy;
+	background-color: black;
+}
+
+.parent {
+	background-color: black;
+  	position: relative;
+
+}
+
+.child {
+	position:absolute;
+	top: 50%;
+	left: 50%;
+	width:750px;
+	height:500px;
+	padding: 20pt;
+	margin-top: 4.5%;
+	margin-left: -400px; /*set to a negative number 1/2 of your width*/
+	background-color: white;
+	color: black;
+	overflow: scroll;
+	overflow-wrap: break-word;
+}
+
+.tweet{
+	font-size: 35pt;
+	padding-bottom: 30pt;
+}
