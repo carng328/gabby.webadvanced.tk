@@ -1,10 +1,16 @@
 @font-face {
-	font-family: Goudy;
-	src: url(../fonts/GoudyStM.otf);
+	font-family: Caslon;
+	src: url(../fonts/ACaslonPro-Regular.otf);
 	}
 
+@font-face {
+	font-family: Circular;
+	src: url(../fonts/CircularStd-Medium.otf);
+	}
+
+
 body {
-	font-family: Goudy;
+	font-family: Caslon;
 	background-color: black;
 }
 
@@ -31,5 +37,29 @@ body {
 
 .tweet{
 	font-size: 35pt;
+	line-height: 45pt;
 	padding-bottom: 30pt;
+}
+
+a{
+	font-family: Circular;
+	vertical-align: super;
+	font-size: 20pt;
+	cursor: pointer;
+	text-decoration: none;
+	color: black
+}
+.definition-container{
+	position: fixed;
+	right: 0;
+	width: 14%;
+	margin-top: 4.5%;
+	margin-right: 2.5%;
+	color: white;
+	font-family: Circular;
+	font-size: 12pt;
+
+}
+
+.definition1{
 }

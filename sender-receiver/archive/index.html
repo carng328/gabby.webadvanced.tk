@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Make America Read Again</title>
+    <link 
+      rel="stylesheet" 
+      href="css/style.css">
+  </head>
+  <body>
+    <!--https://developer.yahoo.com/yql/-->
+    
+    <div id="content"></div>
+      <div class="parent">
+        <div class="child">
+        
+        </div>
+      </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="js/jquery.query-yql.min.js"></script>
+    <script type="text/javascript">
+
+      $(document).ready(function(){
+          $(".child:contains(is)").css("background-color", "yellow");
+      });
+      
+      $(function () {
+        var t = $('#content').empty();
+        var statement = "select * from feed where url='https://twitrss.me/twitter_user_to_rss/?user=realDonaldTrump'";
+        $.queryYQL(statement, "json", undefined, function (data) {
+          // do something with "data".
+          console.log(data.query.results.item);
+          
+          for (var i = 0; i < data.query.results.item.length; i++) {
+            console.log(i);
+            console.log(data.query.results.item[i].title);
+            
+            $(".child").append("<div class='tweet'>" + data.query.results.item[i].title + "</div>");
+            // $("body").append("<p>" + data.query.results.item[i].pubDate + "</p>");
+          }
+          
+
+        });
+
+ 
+      });
+
+      
+
+      var words = ["twitter", "wisconsin", "state", "trump", "jobs", "ceo"];
+      
+      var definitions = ["make a posting on the social media website Twitter.", "the last (or last two) of the Pleistocene glaciations of North America, approximating the Weichsel of northern Europe.", "a nation or territory considered as an organized political community under one government.", "a playing card of the suit chosen to rank above the others, which can win a trick where a card of a different suit has been led.", "a paid position of regular employment.", "a chief executive officer, the highest-ranking person in a company or other institution, ultimately responsible for making managerial decisions."]
+    </script>
+  </body>
+</html>

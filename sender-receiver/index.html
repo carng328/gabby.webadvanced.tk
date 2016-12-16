@@ -9,36 +9,148 @@
   </head>
   <body>
     <!--https://developer.yahoo.com/yql/-->
-
+    
     <div id="content"></div>
       <div class="parent">
         <div class="child">
+        <div class="tweet">
+              Join me in Mobile, Alabama on Sat. at 3pm! #ThankYouTour2016 Tickets: http://bit.ly/2gpwhwcALABAMA pic.twitter.com/opKrWO4k0C
         </div>
+         <div class="tweet">
+              If Russia, or some other entity, was hacking, why did the White House<a href="#" class="footnote1">1</a> wait so long to act? Why did they only complain after Hillary lost?
+          </div>
+          <div class="tweet">
+              The media tries so hard to make my move to the White House<a href="#" class="footnote1">1</a>, as it pertains to my business, so complex - when actually it isn't!
+          </div>
+          <div class="tweet">
+              Thank you to Time Magazine and Financial Times for naming me "Person of the Year" - a great honor!
+          </div>
+         <div class="tweet">
+              Has anyone looked at the really poor numbers of @VanityFair Magazine. Way down, big trouble, dead! Graydon Carter, no talent, will be out!
+          </div>
+         <div class="tweet">
+              .@BillGates and @JimBrownNFL32 in my Trump<a href="#" class="footenote3">3</a> Tower office yesterday- two great guys!pic.twitter.com/4PjSOEU5y9
+          </div>
+         <div class="tweet">
+              Thank you Wisconsin!<a href="#" class="footnote2">2</a> My Administration will be focused on three very important words: jobs, jobs, jobs! Watch: http://bit.ly/2gJ2K4pWisconsin<a href="#" class="footnote2">2</a> Live …pic.twitter.com/87TyY7CG0X
+          </div>
+         <div class="tweet">
+              Join #PEOTUS Trump<a href="#" class="footenote3">3</a> & #VPEOTUS Pence live in West Allis, Wisconsin!<a href="#" class="footnote2">2</a>#ThankYouTour2016 #MAGA http://bit.ly/2gJ2K4pWisconsin<a href="#" class="footnote2">2</a> Live …pic.twitter.com/MVvRxKWmrm
+          </div>
+         <div class="tweet">
+              Join me this Saturday at Ladd–Peebles Stadium in Mobile, Alabama! #ThankYouTour2016 Tickets: http://bit.ly/2gpwhwcALABAMA pic.twitter.com/2aXHTRyNT3
+          </div>
+         <div class="tweet">
+              The thing I like best about Rex Tillerson is that he has vast experience at dealing successfully with all types of foreign governments.
+          </div>
+         <div class="tweet">
+              Wisconsin<a href="#" class="footnote2">2</a> and Pennsylvania have just certified my wins in those states. I actually picked up additional votes!
+          </div>
+         <div class="tweet">
+              I have chosen one of the truly great business leaders of the world, Rex Tillerson, Chairman and CEO of ExxonMobil, to be Secretary of State.
+          </div>
+         <div class="tweet">
+              I will hold a press conference in the near future to discuss the business, Cabinet picks and all other topics of interest. Busy times!
+          </div>
+         <div class="tweet">
+              Presidency. Two of my children, Don and Eric, plus executives, will manage them. No new deals will be done during my term(s) in office.
+          </div>
+        <div class="tweet">
+              Even though I am not mandated by law to do so, I will be leaving my busineses before January 20th so that I can focus full time on the......
+          </div>
+         <div class="tweet">
+              I will be making my announcement on the next Secretary of State tomorrow morning.
+          </div>
+         <div class="tweet">
+              The final Wisconsin<a href="#" class="footnote2">2</a> vote is in and guess what - we just picked up an additional 131 votes. The Dems and Green Party can now rest. Scam!
+          </div>
+        <div class="tweet">
+             #ThankYouTour2016 Tue: West Allis, WI. Thur: Hershey, PA. Fri: Orlando, FL. Sat: Mobile, AL. Tickets: https://www.donaldjtrump<a href="#" class="footenote3">3</a>.com/schedule pic.twitter.com/Wi7bV2JDXY – At Trump<a href="#" class="footenote3">3</a> Tower
+          </div>
+         <div class="tweet">
+              The F-35 program and cost is out of control. Billions of dollars can and will be saved on military (and other) purchases after January 20th.
+          </div>
+         <div class="tweet">
+              Unless you catch "hackers" in the act, it is very hard to determine who was doing the hacking. Why wasn't this brought up before election?
+        </div>
+      </div>
+
+      <div class="definition-container">
+            <div class="definition1">
+              White House
+              <br>
+              <br>
+              1. Also called Executive Mansion. the official residence of the president of the United States, in Washington, D.C.: a large, two-story, freestone building painted white.
+              <br/>
+              <br>
+              2. the executive branch of the U.S. federal government:
+
+            </div>
+
+            <div class="definition2">
+              Wisconsin
+              <br>
+              <br>
+              1. a state in the N central United States: a part of the Midwest. 56,154 sq. mi. (145,440 sq. km).
+              <br/>
+              <br>
+              2. a river flowing SW from N Wisconsin to the Mississippi. 430 miles (690 km) long.
+              <br/>
+              <br/>
+              the fourth stage of the glaciation of North America during the Pleistocene.
+            </div>
+
+            <div class="definition3">
+              Trump
+              <br>
+              <br>
+              1. any playing card of a suit that for the time outranks the other suits, such a card being able to take any card of another suit.
+              <br/>
+              <br>
+              2. trump up, to devise deceitfully or dishonestly, as an accusation; fabricate:
+              
+            </div>
+
       </div>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script src="js/jquery.query-yql.min.js"></script>
     <script type="text/javascript">
-      $(function () {
-        var t = $('#content').empty();
-        var statement = "select * from feed where url='https://twitrss.me/twitter_user_to_rss/?user=realDonaldTrump'";
-        $.queryYQL(statement, "json", undefined, function (data) {
-          // do something with "data".
-          console.log(data.query.results.item);
-          
-          for (var i = 0; i < data.query.results.item.length; i++) {
-            console.log(i);
-            console.log(data.query.results.item[i].title);
-            
-            $(".child").append("<div class='tweet'>" + data.query.results.item[i].title + "</div>");
-            // $("body").append("<p>" + data.query.results.item[i].pubDate + "</p>");
-          }
-          
 
+     $(document).ready(function(){
+
+        $(".definition1").hide();
+
+        $('.footnote1').click(function(){
+        $(".definition1").toggle();
         });
 
- 
-      });
+    });
+
+      $(document).ready(function(){
+
+        $(".definition2").hide();
+
+        $('.footnote2').click(function(){
+        $(".definition2").toggle();
+        });
+
+    });
+
+      $(document).ready(function(){
+
+        $(".definition3").hide();
+
+        $('.footnote3').click(function(){
+        $(".definition3").toggle();
+        });
+
+    });
+      
+
+      // var words = ["twitter", "wisconsin", "state", "trump<a href="#" class="footenote3">3</a>", "jobs", "ceo"];
+      
+      // var definitions = ["make a posting on the social media website Twitter.", "the last (or last two) of the Pleistocene glaciations of North America, approximating the Weichsel of northern Europe.", "a nation or territory considered as an organized political community under one government.", "a playing card of the suit chosen to rank above the others, which can win a trick where a card of a different suit has been led.", "a paid position of regular employment.", "a chief executive officer, the highest-ranking person in a company or other institution, ultimately responsible for making managerial decisions."]
     </script>
   </body>
 </html>
